@@ -1,3 +1,17 @@
+/*
+9. Escreva um algoritmo que leia o código de origem de um produto e imprima a região
+do mesmo, conforme a tabela abaixo:
+1- Sul
+2- Norte
+3- Leste
+4- Oeste
+5 ou 6- Nordeste
+7, 8 ou 9- Sudeste
+10 até 20- Centro-Oeste
+25 até 50- Nordeste
+Fora dos intervalos- Produto importado
+*/
+
 const prompt = require("prompt-sync")();
 
 let code = parseInt(prompt("Insira o código: "));
