@@ -18,7 +18,7 @@ function calculateLifeReduction(cigarettesPerDay, yearsSmoking) {
 const prompt = require('prompt-sync')();
 
 const cigarettesPerDay = parseInt(prompt("Quantidade de cigarros fumados por dia: "));
-const yearsSmoking = parseInt(prompt("Há quantos está fumando: "));
+const yearsSmoking = parseInt(prompt("Há quantos anos está fumando: "));
 
 const daysLost = calculateLifeReduction(cigarettesPerDay, yearsSmoking);
 
