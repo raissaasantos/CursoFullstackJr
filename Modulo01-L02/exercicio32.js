@@ -1,71 +1,55 @@
 /*
-Escreva um algoritmo que leia um número inteiro A e uma matriz V 30 x 30 de inteiros.
-Conte quantos valores iguais a A estão na matriz. Crie, a seguir, uma matriz X contendo
-todos os elementos de V diferentes de A. Mostre os resultados.
+Escrever um algoritmo que lê uma matriz M(12,13) e divida todos os 13 elementos de
+cada uma das 12 linhas de M pelo maior elemento em módulo daquela linha. Escrever a
+matriz lida e a modificada.
 */
 
 
-const prompt = require('prompt-sync')();
-
-function criarMatriz(rows, cols) {
-    let matriz = [];
+// Função para gerar uma matriz 12x13 preenchida com números inteiros aleatórios
+function generateMatrix(rows, cols) {
+    const matrix = [];
     for (let i = 0; i < rows; i++) {
-        let linha = [];
+        const row = [];
         for (let j = 0; j < cols; j++) {
-            linha.push(Math.floor(Math.random() * 100)); 
+            row.push(Math.floor(Math.random() * 201) - 100); // Números aleatórios de -100 a 100
         }
-        matriz.push(linha);
+        matrix.push(row);
     }
-    return matriz;
+    return matrix;
 }
 
-
-function contarValores(matriz, A) {
-    let count = 0;
-    for (let i = 0; i < matriz.length; i++) {
-        for (let j = 0; j < matriz[i].length; j++) {
-            if (matriz[i][j] === A) {
-                count++;
-            }
-        }
-    }
-    return count;
+// Função para encontrar o maior valor em módulo em uma linha
+function maxAbsValue(row) {
+    return Math.max(...row.map(Math.abs));
 }
 
-
-function criarMatrizX(matriz, A) {
-    let matrizX = [];
-    for (let i = 0; i < matriz.length; i++) {
-        let linha = [];
-        for (let j = 0; j < matriz[i].length; j++) {
-            if (matriz[i][j] !== A) {
-                linha.push(matriz[i][j]);
-            }
-        }
-        matrizX.push(linha);
-    }
-    return matrizX;
+// Função para dividir cada elemento de uma linha pelo maior valor em módulo
+function normalizeRow(row) {
+    const maxAbs = maxAbsValue(row);
+    return row.map(value => value / maxAbs);
 }
 
-
-function exibirResultados(matriz, count, matrizX) {
-    console.log("Matriz V(30,30):");
-    matriz.forEach(linha => console.log(linha));
-
-    console.log(`\nNúmero de elementos iguais a A: ${count}`);
-
-    console.log("\nMatriz X (elementos de V diferentes de A):");
-    matrizX.forEach(linha => console.log(linha));
+// Função para imprimir uma matriz
+function printMatrix(matrix, title) {
+    console.log(title);
+    matrix.forEach(row => {
+        console.log(row.map(value => value.toFixed(2)).join(' '));
+    });
 }
 
+// Função principal
+function main() {
+    const rows = 12;
+    const cols = 13;
+    const M = generateMatrix(rows, cols);
 
-const rows = 30;
-const cols = 30;
+    printMatrix(M, "Matriz original M:");
 
-const A = parseInt(prompt("Digite um número inteiro A: "));
+    const M_normalized = M.map(normalizeRow);
 
-let matrizV = criarMatriz(rows, cols);
-let count = contarValores(matrizV, A);
-let matrizX = criarMatrizX(matrizV, A);
+    printMatrix(M_normalized, "Matriz M normalizada:");
+}
 
-exibirResultados(matrizV, count, matrizX);
+// Executar a função principal
+main();
+
