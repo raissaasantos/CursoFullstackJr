@@ -1,51 +1,54 @@
 /*
-Escrever um algoritmo que lê uma matriz M(5,5) e cria 2 vetores SL(5) e SC(5) que
-contenham, respectivamente, as somas das linhas e das colunas de M. Escrever a matriz
-e os vetores criados.
+Escreva um algoritmo que leia um número inteiro A e uma matriz V 30 x 30 de inteiros.
+Conte quantos valores iguais a A estão na matriz. Crie, a seguir, uma matriz X contendo
+todos os elementos de V diferentes de A. Mostre os resultados.
 */
 
-function criarMatriz(rows, cols) {
-    let matriz = [];
-    for (let i = 0; i < rows; i++) {
-        let linha = [];
-        for (let j = 0; j < cols; j++) {
-            linha.push(Math.floor(Math.random() * 100));
+const prompt = require('prompt-sync')();
+
+function generateMatrix(size) {
+    const matrix = [];
+    for (let i = 0; i < size; i++) {
+        const row = [];
+        for (let j = 0; j < size; j++) {
+            row.push(Math.floor(Math.random() * 100)); 
         }
-        matriz.push(linha);
+        matrix.push(row);
     }
-    return matriz;
+    return matrix;
 }
 
 
-function calcularSomas(matriz) {
-    let SL = Array(matriz.length).fill(0);
-    let SC = Array(matriz[0].length).fill(0);
+function processMatrix(matrix, A) {
+    let count = 0;
+    const X = [];
 
-    for (let i = 0; i < matriz.length; i++) {
-        for (let j = 0; j < matriz[i].length; j++) {
-            SL[i] += matriz[i][j];
-            SC[j] += matriz[i][j];
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (matrix[i][j] === A) {
+                count++;
+            } else {
+                X.push(matrix[i][j]);
+            }
         }
     }
 
-    return { SL, SC };
+    return { count, X };
 }
 
-function exibirResultados(matriz, SL, SC) {
-    console.log("Matriz M(5,5):");
-    matriz.forEach(linha => console.log(linha));
 
-    console.log("\nVetor SL (somas das linhas):");
-    console.log(SL);
+function main() {
+    const A = parseInt(prompt("Digite um número inteiro A:"));
+    const V = generateMatrix(30);
 
-    console.log("\nVetor SC (somas das colunas):");
-    console.log(SC);
+    console.log("Matriz V:");
+    console.table(V);
+
+    const { count, X } = processMatrix(V, A);
+
+    console.log(`Número de valores iguais a ${A} na matriz: ${count}`);
+    console.log("Matriz X (valores diferentes de A):");
+    console.table(X);
 }
 
-const rows = 5;
-const cols = 5;
-
-let matriz = criarMatriz(rows, cols);
-let { SL, SC } = calcularSomas(matriz);
-
-exibirResultados(matriz, SL, SC);
+main();
