@@ -1,0 +1,52 @@
+body {
+    background: rgb(216, 197, 191);
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+form {
+    height: 300px;
+    width: 250px;
+    background: rgb(85, 131, 190);
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: wheat;
+    margin: 100px auto;
+}
+
+table {
+    margin: 50px auto;
+}
+
+.result {
+    display: block;
+    margin-bottom: 20px;
+    block-size: 2rem;
+    border: 2px solid;
+    border-color: wheat;
+}
+
+.btn {
+    display: block;
+    height: 2rem;
+}
+
+.botao {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: white;
+    background: rgb(25, 60, 105);
+    border: 1px solid;
+    border-radius: 2px;
+    height: 1.7rem;
+    width: 2.7rem;
+}
+
+
+
