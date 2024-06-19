@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(248, 243, 234);
+}
+
+header {
+    background: lightblue;
+    height: 5rem;
+    width: 100%;
+}
+
+nav {
+    overflow: hidden;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    float: left; 
+    color: rgb(9, 37, 80);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    float: right;
+    margin: 20px;
+}
+
+nav ul li {
+    float: left;
+    margin-left: 25px;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: black;
+    background-color: rgb(248, 243, 234);
+    border: 1px solid;
+    border-color: white;
+    border-radius: 5px;
+}
+
+main {
+    padding: 5rem 15rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+
+.book-info {
+    margin-top: 2rem;
+}
+
+select {
+    background: white;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    border-color: white;
+}
+
+#year {
+    height: 3rem;
+    width: 10rem;
+}
+
+#month {
+    height: 3rem;
+    width: 10rem;
+}
+
+#day {
+    height: 3rem;
+    width: 10rem;
+}
+
+#genre {
+    height: 3rem;
+    width: 22.5rem;
+}
+
+.book-rating {
+    margin-top: 0.5rem;
+}
+
+#description {
+    height: 3rem;
+    width: 31.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    border-color: white;
+    text-align:center;
+}
+
+#rate {
+    height: 3rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    border-color: white;
+    text-align: center;
+}
+
+#add {
+    height: 3rem;
+    width: 3rem;
+    margin-left: 9rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    border-color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(9, 37, 80);
+    background: white;
+}
+
+#search {
+    height: 3rem;
+    width: 5rem;
+    margin-left: 7rem;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    border-color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(9, 37, 80);
+    background: white;
+}
+
+.search-tags {
+    background-color: lightblue;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    padding: 15px 20px;
+}
+
+.search-tags ul li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    list-style: none;
+    margin-right: 7rem;
+    float: left;
+    margin-left: 25px;
+}
