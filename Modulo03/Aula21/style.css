@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: black;
+    text-align: center;
+    margin-top: 18rem;
+}
+
+button {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: wheat;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 10px;
+    height: 3rem;
+    width: 4rem;
+}

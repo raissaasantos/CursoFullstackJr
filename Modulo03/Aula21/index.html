@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS aplicando CSS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function changeStyle(color){
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Pick a colour!</h1>
+    <button type="button" class="violet" onclick="changeStyle('violet')">Violet</button>
+    <button type="button" class="teal" onclick="changeStyle('teal')">Teal</button>
+    <button type="button" class="blue" onclick="changeStyle('lightblue')">Blue</button>
+    <button type="button" class="pink" onclick="changeStyle('pink')">Pink</button>
+</body>
+</html>
