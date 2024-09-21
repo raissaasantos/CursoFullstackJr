@@ -74,34 +74,43 @@ select {
 #year {
     height: 3rem;
     width: 10rem;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #month {
     height: 3rem;
     width: 10rem;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #day {
     height: 3rem;
     width: 10rem;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #genre {
     height: 3rem;
     width: 22.5rem;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .book-rating {
     margin-top: 0.5rem;
 }
 
-#description {
+#name {
     height: 3rem;
     width: 31.2rem;
     border-radius: 0.5rem;
     border: 1px solid;
     border-color: white;
-    text-align:center;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #rate {
@@ -110,7 +119,8 @@ select {
     border-radius: 0.5rem;
     border: 1px solid;
     border-color: white;
-    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #add {
@@ -139,6 +149,7 @@ select {
     background: white;
 }
 
+/*
 .search-tags {
     background-color: lightblue;
     border-radius: 0.5rem;
@@ -154,4 +165,22 @@ select {
     margin-right: 7rem;
     float: left;
     margin-left: 25px;
+}*/
+
+table {
+    margin-top: 3rem;
+    width: 100%;
+    border-collapse: collapse;
 }
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid;
+    border-color: white;
+}
+
+th {
+    background-color: lightblue;
+}
+

@@ -20,6 +20,7 @@
         <h1>Register new book</h1>
         <section class="book-info">
             <select name="year" id="year">
+                <option value="" disabled selected>Year</option>
                 <option value="2024">2024</option>
                 <option value="2023">2023</option>
                 <option value="2022">2022</option>
@@ -27,6 +28,7 @@
                 <option value="2019">2019</option>
             </select>
             <select name="month" id="month">
+                <option value="" disabled selected>Month</option>
                 <option value="January">January</option>
                 <option value="February">February</option>
                 <option value="March">March</option>
@@ -41,6 +43,7 @@
                 <option value="December">December</option>
             </select>
             <select name="day" id="day">
+                <option value="" disabled selected>Day</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -74,6 +77,7 @@
                 <option value="31">31</option>
             </select>
             <select name="genre" id="genre">
+                <option value="" disabled selected>Genre</option>
                 <option value="Fantasy">Fantasy</option>
                 <option value="Romance">Romance</option>
                 <option value="Fiction">Fiction</option>
@@ -84,10 +88,11 @@
         </section>
 
         <section class="book-rating">
-            <input type="text" id="description">
-            <input type="number" id="rate" min="1" max="5" step="0.5">
+            <input type="text" id="name" placeholder="Book name">
+            <input type="number" id="rate" min="1" max="5" step="0.5" placeholder="Rate">
             <button id="add">+</button>
         </section>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>
